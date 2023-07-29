@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8D64C627"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="YAYINCI"
+        android:textSize="60sp"
+        android:textColor="#FF3200"
+        android:layout_above="@+id/bottom_layout"
+        android:layout_marginBottom="60dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/st"></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yeni bir yayın başlatmak veya yayına katılmak için bilgileri doldur."
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:layout_above="@+id/bottom_layout"
+        android:layout_marginBottom="10dp"
+        android:padding="4dp"
+        android:gravity="center"
+        android:fontFamily="@font/st"></TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="@color/white"
+        android:orientation="vertical"
+        android:padding="64dp"
+        android:background="@drawable/rounded_corner_top"
+        android:id="@+id/bottom_layout">
+        
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Yayıncı Oda Numarası"
+            android:backgroundTint="#FF0000"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="5"
+                android:textSize="18sp"
+                android:id="@+id/live_id_input">
+
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kullanıcı Adınız"
+            android:layout_marginTop="25dp"
+            android:backgroundTint="#FF0000"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:id="@+id/name_input">
+
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+        
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Yayına Başla"
+            android:padding="12dp"
+            android:textColor="#FF3200"
+            android:layout_marginTop="30dp"
+            android:textSize="16sp"
+            android:background="@drawable/roundedcorner"
+            android:id="@+id/go_live_button"></androidx.appcompat.widget.AppCompatButton>
+        
+    </LinearLayout>
+
+</RelativeLayout>
